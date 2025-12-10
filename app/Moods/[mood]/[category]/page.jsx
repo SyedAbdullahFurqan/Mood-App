@@ -29,7 +29,7 @@ console.log(items)
        <Back movie={category}  catego={mood} />
       <h1 className="text-2xl  p-2 font-bold capitalize">{mood} {category}</h1>
      
-<div className=' grid grid-cols-3 gap-4 mx-3 justify-center items-center'>
+<div className=' grid grid-cols-3 gap-4 px-5 justify-center items-center'>
 {items?.map((card) => (
   <div className='p-3 w-full m-2 rounded-2xl transform scale-100 hover:scale-102 mx-3 border-2'>
 
@@ -40,9 +40,15 @@ console.log(items)
           src={`https://image.tmdb.org/t/p/w500${card.backdrop_path}`} 
           className="h-40 w-full object-cover rounded"
         />
-        <h5 className="p-2">Name : {card.title}</h5>
-        <p className="my-2">Release: {card.release_date}</p>
-        <p>Rating: {card.vote_average}</p>
+    
+        <h5 className="p-2 font-bold font-serif">Name : {card.title}</h5>
+
+
+            <p className="line-clamp-2 ps-2 font-semibold font-serif "> Description : {card.
+overview
+}</p>
+        <p className="my-2  font-serif ps-2">Release: {card.release_date}</p>
+        <p className=" ps-2 font-sans">Rating: {card.vote_average}</p>
       </>
     )}
 
@@ -53,7 +59,7 @@ console.log(items)
           src={card.snippet?.thumbnails?.medium?.url} 
           className="h-40 w-full object-cover rounded"
         />
-        <h5 className="p-3 font-bold font-sans"> Song Name : {card.snippet?.title}</h5>
+        <h5 className="p-3 font-bold font-serif"> Song Name : {card.snippet?.title}</h5>
 
         <a
           href={`https://www.youtube.com/watch?v=${card.id?.videoId}`}

@@ -19,17 +19,17 @@ const Navbars = ({opens,setOpens}) => {
  <nav className= "bg-cyan-800 w-full z-40 fixed top-0 left-0 right-0  text-white shadow-md    ">
     
         <div className="flex justify-around  items-center h-19 ">
-<span className=''> <img src="moodss.png" alt=""className='w-18 rounded-2xl   ' /></span>
+ <img src="/moodss.png" alt=""className='w-18 rounded-2xl   ' />
 
           <div className="">
 
 
             {/* Desktop links */}
-            <div className="hidden md:flex items-center justify-center space-x-6">
+            <div className="hidden md:flex   items-center justify-center space-x-6">
               {links.map((l) => (
-                <ul>
-                  
-                  <li className='text-lg pb-1 border-b-2 border-transparent hover:border-blue-300 transition-all text-white hover:text-cyan-300'>
+                <ul className='cursor-pointer'>
+                   
+                  <li className='text-lg pb-1  border-b-2 border-transparent hover:border-blue-300 transition-all text-white hover:text-cyan-300'>
                 <Link key={l.href} href={l.href}>
 
                   {l.label}

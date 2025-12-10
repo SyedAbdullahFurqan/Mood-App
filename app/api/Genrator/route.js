@@ -66,13 +66,13 @@ const query = encodeURIComponent(`${fet} Hindi song`);
     );
        const conv=await res.json()
 const movies= await fetch(
-      `https://api.themoviedb.org/3/discover/movie?api_key=9c1352a5828c9a5331c24a2f7782b113&with_genres=${genreIds}`
+      `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.MovieKey}&with_genres=${genreIds}`
     )
 
     const convets= await movies.json()
 //  return NextResponse.json({datas:`moviee data ${JSON.parse(convets)}`});
       const song= await fetch(
-  `https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=10&q=${query}&key=AIzaSyBZNqwzUYK8YscAs8D-5YJVo_mYCMgcjzk`
+  `${process.env.GoogleAPIKey}/search?part=snippet&type=video&maxResults=10&q=${query}&key=${process.env.GoogleToken}`
 );
 
 const get=  await song.json()

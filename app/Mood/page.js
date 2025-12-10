@@ -1,15 +1,14 @@
 "use client"
 
 import React, { useEffect, useState } from 'react'
-import hap from "@/public/emoji.png"
+
 import Image from 'next/image';
 import { useDispatch } from 'react-redux';
-import { Imgess, mega, Movies, Quotes, Song } from '@/store/counterSlice';
+import { Imgess, mega} from '@/store/counterSlice';
 import { useRouter } from "next/navigation"; // ✔ RIGHT
 const page = () => {
   const [Mood, setMood] = useState("");
-  const [Quot, setQuot] = useState({Song:[],Move:[],Quotes:[]});
-
+ 
   const router=useRouter()
 //     const moodToGenres = {
 //   happy: "35,10751",
@@ -147,13 +146,6 @@ useEffect(() => {
 
 //    }
 
-//  async function song() {
-  
-//     try {
-//     const res = await fetch(
-//   `https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=10&q=${query}&key=AIzaSyBZNqwzUYK8YscAs8D-5YJVo_mYCMgcjzk`
-// );
-
 // const get=  await res.json()
 // console.log(get.items)
 //   dis(Song(get.items))
@@ -253,7 +245,7 @@ console.log(Mood)
         </div>
       );
     })}
-  <button onClick={clickks} style={ {backgroundColor:butt,}} className='mt-4 border-2  rounded-3xl w-30 p-3 px-4 py-2 ' st> Genrate</button>
+  <button onClick={clickks} style={ {backgroundColor:butt,}} className='mt-4 border-2  rounded-3xl w-30 p-3 px-4 py-2 ' > Genrate</button>
 
   </div>
 
