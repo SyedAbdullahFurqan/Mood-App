@@ -191,7 +191,6 @@ console.log(data.map((m) => m.img))
 
 
 
-console.log(Quot)
 console.log(Mood)
 
   return (
