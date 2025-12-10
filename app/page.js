@@ -1,8 +1,9 @@
-import Image from "next/image";
-
+"use client"
 import Link from "next/link";
-
+import { useSession, signIn, signOut } from "next-auth/react";
 export default function Home() {
+
+     const { data: session,status } = useSession();
   const style = {
     background:
       "CBF3BB",
@@ -24,12 +25,13 @@ export default function Home() {
 
         {/* CTA Buttons */}
         <div className="mt-8 flex justify-center  gap-4">
-          <Link href="/Mood">
+      
+          <Link href={`${!session? "/api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2F":"/Mood"}`} >
           <button className="px-6 py-3 cursor-pointer bg-cyan-500 text-white rounded-xl hover:bg-cyan-600 transition">
             Explore Moods
           </button>
           </Link>
-            <Link href="/Genrate">
+            <Link href={`${!session? "/api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2F":"/Genrate"}`}  >
           <button className="px-6 py-3 border cursor-pointer   rounded-xl hover:bg-cyan-400 transition">
             Generate My Vibe
           </button></Link>

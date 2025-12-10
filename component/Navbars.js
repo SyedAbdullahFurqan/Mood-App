@@ -41,7 +41,7 @@ const Navbars = ({opens,setOpens}) => {
             </div>
           </div>
 
-          <div className="block md:hidden">
+          <div className="block md:hidden ">
             {/* Theme toggle */}
         
    <button
@@ -77,7 +77,7 @@ const Navbars = ({opens,setOpens}) => {
               )}
             </button>
           </div>
-                   <div className="hidden md:flex">
+                   <div className="hidden md:flex ">
                <button
               aria-label="Toggle theme"
               onClick={() => setOpens((t) => (t === 'dark' ? 'light' : 'dark'))}
@@ -97,12 +97,12 @@ const Navbars = ({opens,setOpens}) => {
       {!session ? (
         <button
           onClick={() => signIn()}
-          className="bg-blue-600 text-white px-2 py-1  hover:bg-blue-700 transition"
+          className="bg-blue-600 text-white px-2 py-1 cursor-pointer  hover:bg-blue-700 transition"
         >
           Sign In
         </button>
       ) : (
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 mx-2 ">
           <Image
             src={session?.user?.image || "/default-avatar.png"}
             alt="User Image"
@@ -110,10 +110,10 @@ const Navbars = ({opens,setOpens}) => {
             height={40}
             className="rounded-full"
           />
-          <p className="text-white text-[15px]">{session?.user?.name}</p>
+          <p className="text-white text-[15px] ">{session?.user?.name}</p>
           <button
             onClick={() => signOut()}
-            className="bg-red-500 text-white px-2 py-1 rounded-lg hover:bg-red-600 transition"
+            className="bg-red-500 cursor-pointer text-white px-2 py-1 rounded-lg hover:bg-red-600 transition"
           >
             Sign Out
           </button>

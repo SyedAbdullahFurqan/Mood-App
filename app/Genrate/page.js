@@ -8,7 +8,8 @@ import React, { useEffect, useState } from 'react'
 
 const page = () => {
  
-    const [Data, setData] = useState(null);
+    const [Data, setData] = useState([]);
+    const [loading, setLoading] = useState(true);
 async  function get(params) {
   try {
     const res = await fetch("http://localhost:3000/api/Genrator", {
@@ -28,6 +29,9 @@ setData(datas.get)
   } catch (error) {
     console.error("Error fetching FavQs API:", error);
   }
+  finally {
+      setLoading(false);
+    }
 }
 useEffect(() => {
   get()
@@ -43,7 +47,16 @@ useEffect(() => {
       
     <h1 className='text-center  space-y-6 text-3xl font-bold my-2'>Choose Your Mood to Discover Something Just for You <br /><span className='space-y-6  font-semibold text-cyan-500'>
 Movies, Songs & Quotes matched perfectly to your emotions</span>.</h1>
+
+     {loading ? (
+  <div className="flex justify-center items-center py-10">
+    <h1 className="text-xl font-bold">Loading...</h1>
+  </div>
+) :
+  Data.length > 0 ? (
 <div className='grid grid-cols-1  sm:grid-cols-2  md:grid-cols-3 mt-3 mx-2 gap-5 justify-center items-center w-full'>
+ 
+
       {Data && Data.map((allData)=>{
 
 console.log(allData)
@@ -73,6 +86,22 @@ Imges || ""}` } alt="" /> */}
 )
 
       })}</div>
+
+) : (
+
+<div className='flex justify-center items-center flex-col '>
+<h1 className='text-center  space-y-2 mt-5 text-3xl font-bold  uppercase'>no mood found</h1>
+<img src="/nodata.png" alt="" className='w-100' />
+<Link href={`/Mood`}>
+
+<button className='my-2 bg-cyan-300 border-2 rounded-3xl px-3 py-2 cursor-pointer uppercase'>create your vibes</button>
+
+ </Link> 
+</div>
+
+)}
+
+
 </div>
       {/* <img src={IMG.img} className='w-50'/>
       <div className='capitalize text-center my-2 w-100'>
