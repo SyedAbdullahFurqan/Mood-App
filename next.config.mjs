@@ -2,11 +2,22 @@
 const nextConfig = {
   /* config options here */
   images: {
-    domains: [
-      "lh3.googleusercontent.com",      // Google profile images
-      "avatars.githubusercontent.com",  // GitHub profile images
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "lh3.googleusercontent.com",
+        port: "",
+        pathname: "/**", // allow all paths
+      },
+      {
+        protocol: "https",
+        hostname: "avatars.githubusercontent.com",
+        port: "",
+        pathname: "/**", // allow all paths
+      },
     ],
   },
+  
   reactCompiler: true,
 };
 
