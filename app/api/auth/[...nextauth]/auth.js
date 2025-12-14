@@ -1,5 +1,3 @@
-
-
 import { connectDB } from "@/lib/mongodb";
 import Mood from "@/model/Mood";
 import NextAuth from "next-auth"

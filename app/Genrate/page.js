@@ -53,7 +53,7 @@ Movies, Songs & Quotes matched perfectly to your emotions</span>.</h1>
     <h1 className="text-xl font-bold">Loading...</h1>
   </div>
 ) :
-  Data.length > 0 ? (
+  Data?.length > 0 ? (
 <div className='grid grid-cols-1  sm:grid-cols-2  md:grid-cols-3 mt-3 mx-2 gap-5 justify-center items-center w-full'>
  
 

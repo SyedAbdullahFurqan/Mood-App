@@ -19,7 +19,7 @@ const Navbars = ({opens,setOpens}) => {
  <nav className= "bg-cyan-800 w-full z-40 fixed top-0 left-0 right-0  text-white shadow-md    ">
     
         <div className="flex justify-around  items-center h-19 ">
- <img src="/moodss.png" alt=""className='w-18 rounded-2xl   ' />
+ <img src="/moodss.png" alt=""className='w-14 sm:w-17 rounded-2xl   ' />
 
           <div className="">
 

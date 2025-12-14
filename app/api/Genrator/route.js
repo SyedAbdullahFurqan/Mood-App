@@ -1,9 +1,8 @@
 
 import { NextResponse } from "next/server";
-import { connectDB } from "@/lib/mongodb";
+import {connectDB}from "@/lib/mongodb";
 
 import User from "@/model/User";
-import { Shadows_Into_Light } from "next/font/google";
 import { authOptions } from "../auth/[...nextauth]/auth";
 import { getServerSession } from "next-auth";
 

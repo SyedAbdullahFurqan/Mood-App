@@ -201,17 +201,17 @@ console.log(Mood)
 
          
 
-<h1 style={{color:butt}} className=' mx-2 text-center text-3xl font-bold font-sans '>
+<h1 style={{color:butt}} className=' mx-2 text-center text-[17px]  sm:text-2xl md:text-3xl font-bold font-sans '>
   Discover Movies, Songs & Quotes Based on Your <span >Mood</span>
 </h1>
 {/* <p className="  mt-4 text-2xl font-semibold   text-center leading-loose">
   Tell us how you feel, and we’ll generate the perfect movies, songs, and quotes for your vibe.
  .
 </p> */}
-<p className='  mt-5 text-2xl text-center leading-loose '>
+<p className='  mt-5 text-[13px] sm:text-2xl text-center  sm:leading-loose '>
   Whether you're happy, sad, stressed, romantic, or just chilling <br />
   Pick a mood and explore a personalized collection crafted just for you  </p>
-<h1  className="block mb-2 text-2xl mt-5">
+<h1  className="block mb-2 text-[14px] sm:text-2xl mt-5">
   Choose Your Mood
 </h1>
       <select
@@ -244,7 +244,7 @@ console.log(Mood)
         </div>
       );
     })}
-  <button onClick={clickks} style={ {backgroundColor:butt,}} className='mt-4 border-2  rounded-3xl w-30 p-3 px-4 py-2 ' > Genrate</button>
+  <button onClick={clickks} style={ {backgroundColor:butt,}} className='mt-4 border-2  rounded-3xl w-30  px-4 py-2 ' > Genrate</button>
 
   </div>
 
