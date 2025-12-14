@@ -42,10 +42,12 @@ useEffect(() => {
     <>
 
 
-    <div  className=' pt-16  min-h-screen flex w-full justify-center items-center flex-col '>
+    <div  className=' pt-17 mt-4  min-h-screen flex w-full justify-center items-center flex-col '>
 
       
-    <h1 className='text-center  space-y-6 text-3xl font-bold my-2'>Choose Your Mood to Discover Something Just for You <br /><span className='space-y-6  font-semibold text-cyan-500'>
+    <h1 className='text-center  space-y-4 text-2xl  text-[14px] sm:text-3xl font-bold my-2'>Choose Your Mood to Discover Something Just for You <br />
+    
+    <span className='space-y-4 leading-loose text-2xl text-[14px] sm:text-3xl font-semibold text-cyan-500'>
 Movies, Songs & Quotes matched perfectly to your emotions</span>.</h1>
 
      {loading ? (
@@ -90,11 +92,11 @@ Imges || ""}` } alt="" /> */}
 ) : (
 
 <div className='flex justify-center items-center flex-col '>
-<h1 className='text-center  space-y-2 mt-5 text-3xl font-bold  uppercase'>no mood found</h1>
-<img src="/nodata.png" alt="" className='w-100' />
+<h1 className='text-center  space-y-2 mt-5 text-[14px] text-2xl sm:text-3xl font-bold  uppercase'>no mood found</h1>
+<img src="/nodata.png" alt="" className='  w-55 sm:w-100' />
 <Link href={`/Mood`}>
 
-<button className='my-2 bg-cyan-300 border-2 rounded-3xl px-3 py-2 cursor-pointer uppercase'>create your vibes</button>
+<button className='my-2 bg-cyan-300 border-2 rounded-3xl px-2 py-1 sm:px-3 sm:py-2 cursor-pointer capitalize'>create your vibes</button>
 
  </Link> 
 </div>

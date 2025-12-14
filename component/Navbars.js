@@ -8,12 +8,27 @@ const Navbars = ({opens,setOpens}) => {
  
  const { data: session} = useSession();
 
-  const links = [
-    { href: '/  ', label: 'Home' },
-    { href: '/Mood', label: 'Mood' },
-    { href: '/Genrate', label: 'Generate' },
-  ]
 
+ const links = [
+  {
+    href: "/",
+    label: "Home",
+  },
+  {
+    href: !session
+      ? "/api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2F"
+      : "/Mood",
+    label: "Mood",
+  },
+
+  {
+    href: !session
+      ? "/api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2F"
+      : "/Genrate",
+    label: "Generate",
+  },
+ 
+];
   return (<>
 
  <nav className= "bg-cyan-800 w-full z-40 fixed top-0 left-0 right-0  text-white shadow-md    ">
