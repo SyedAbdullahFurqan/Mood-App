@@ -12,7 +12,7 @@ const page = () => {
     const [loading, setLoading] = useState(true);
 async  function get(params) {
   try {
-    const res = await fetch("http://localhost:3000/api/Genrator", {
+    const res = await fetch("https://mood-app-gold.vercel.app/api/Genrator", {
     method:'GET',
 
  

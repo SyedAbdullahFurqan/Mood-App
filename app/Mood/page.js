@@ -168,7 +168,7 @@ useEffect(() => {
 async function clickks(params) {
   
   try {
-    const res = await fetch("http://localhost:3000/api/Genrator", {
+    const res = await fetch("https://mood-app-gold.vercel.app/api/Genrator", {
     method:'POST',
  body:JSON.stringify(Mood)
  
